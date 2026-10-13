@@ -15,7 +15,7 @@ setInterval(createHeart, 350);
 
 // 2. فحص الباسورد ودخول الصفحة
 function checkPassword() {
-  const correctPassword = "29/6/2002"; 
+  const correctPassword = "3/7/2002"; 
   const userInput = document.getElementById("passwordInput").value.trim();
   const errorMsg = document.getElementById("error-msg");
 
