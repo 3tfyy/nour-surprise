@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>رسالة خاصة لـ نور 🌸</title>
+  <link rel="stylesheet" href="nour.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+  <div class="hearts-container" id="heartsContainer"></div>
+
+  <!-- 1️⃣ شاشة الباسورد -->
+  <div id="login-screen" class="card">
+    <div class="lock-icon">🌸</div>
+    <h2>مكان هادي ليكي.. ✨</h2>
+    <p class="sub-text">ادخلي كلمة السر عشان تفكي الضغط شوية</p>
+    <input type="password" id="passwordInput" placeholder="اكتبي الباسورد هنا...">
+    <button onclick="checkPassword()">افتحي الرسالة 💖</button>
+    <p id="error-msg" class="error"></p>
+  </div>
+
+  <!-- 2️⃣ شاشة المفاجأة -->
+  <div id="surprise-screen" class="card surprise-card hidden">
+    <div class="badge">🌸 عشان ابتسامتك بالدنيا</div>
+    <h1 class="glow-text">فكيها بقى.. الزعل مش لايق عليكِ! 👑</h1>
+
+    <!-- 📸 برواز الصورة الرئيسية -->
+    <div class="photo-wrapper">
+      <img src="nour.jpg" alt="Nour" class="hero-photo">
+    </div>
+
+    <!-- مشغل الصوت -->
+    <audio id="laughAudio" src="nour.ogg" preload="auto"></audio>
+
+    <!-- النص -->
+    <div class="message-box">
+      <p class="message" id="typingText"></p>
+    </div>
+
+    <!-- الأزرار -->
+    <div class="interactive-btns">
+      <button class="cute-btn" onclick="playLaughAudio()">فين الضحكة الحلوة؟ 😂💖</button>
+      <!-- زرار الصورة عند الضغط -->
+      <button class="cute-btn" onclick="showSidePhoto()">أنا جنبك دايماً 🤍</button>
+      <button class="cute-btn" onclick="popLove('أهم حاجة راحتك ونفسيتك بالدنيا كلها 🌸')">أهم حاجة راحتك 🌸</button>
+    </div>
+
+    <p id="toast-msg" class="toast"></p>
+  </div>
+
+  <!-- 🖼️ النافذة المنبثقة للصورة الخاصة لزرار "أنا جنبك دايماً" -->
+  <div id="photo-modal" class="modal hidden">
+    <div class="modal-content card">
+      <span class="close-btn" onclick="closeSidePhoto()">&times;</span>
+      <h2>دايماً معاكي وفي ظهرك 🤍</h2>
+      <div class="modal-photo-box">
+        <!-- حط الصورة اللي عاوزها تظهر هنا وسميها side-photo.jpg -->
+        <img src="nour.jpeg" alt="Together" class="modal-img">
+      </div>
+      <p class="message">"مهما حصل ومهما كانت الأيام صعبة، افتكري دايماً إنك مش لوحدك!" ✨💖</p>
+    </div>
+  </div>
+
+  <script src="nour.js"></script>
+</body>
+</html>
